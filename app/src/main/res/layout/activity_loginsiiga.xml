@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/navigate_before"
+            android:src="@drawable/navigate_before"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/iniciar_sesion"
+            android:layout_width="135dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Iniciar sesión"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/navigate_before" />
+
+        <ImageView
+            android:id="@+id/logo2"
+            android:layout_width="310dp"
+            android:layout_height="322.79dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/logo2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iniciar_sesion" />
+
+        <EditText
+            android:id="@+id/et_codigo"
+            android:layout_width="350dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/input_chip"
+            android:hint="Escribe tu código"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo2" />
+
+        <EditText
+            android:id="@+id/et_dni"
+            android:layout_width="350dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/input_chip"
+            android:hint="Ingresa tu DNI"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_codigo" />
+
+        <EditText
+            android:id="@+id/et_contrasena"
+            android:layout_width="350dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/input_chip"
+            android:hint="Ingresa la contraseña"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_dni" />
+
+        <TextView
+            android:id="@+id/olvide_contrasena"
+            android:layout_width="163dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/alice_blue"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="¿Olvidaste la contraseña?"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_contrasena" />
+
+        <Button
+            android:id="@+id/btn_continuar"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/primary"
+            android:text="Continuar"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/olvide_contrasena" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+
+

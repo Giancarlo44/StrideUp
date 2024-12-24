@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <!-- Header -->
+
+    <!-- Points and Level -->
+
+
+    <ImageView
+        android:id="@+id/navigate_before"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="48dp"
+        android:src="@drawable/navigate_before"
+        app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginBottom="88dp"
+        android:text="Datos personales"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ivAvatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Avatar Navigation -->
+
+    <ImageView
+        android:id="@+id/ivPoints"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_points"
+        app:layout_constraintEnd_toStartOf="@+id/tvPoints"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="108dp"
+        android:text="30000"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="88dp"
+        android:text="22"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvLevelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="308dp"
+        android:text="Nivel"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPoints"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/btnPrevAvatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_chevron_left"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAvatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivAvatar" />
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="168dp"
+        android:src="@drawable/avatar_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/btnNextAvatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivAvatar" />
+
+    <!-- Name -->
+
+    <!-- Guild and Clan -->
+
+    <ImageView
+        android:id="@+id/btnEditName"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="540dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Karen Ramírez"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnEditName"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatar" />
+
+    <ImageView
+        android:id="@+id/ivClan"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_clan"
+        app:layout_constraintEnd_toEndOf="@+id/tvClanLabel"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="@+id/tvClanLabel"
+        app:layout_constraintTop_toTopOf="@+id/ivGremio" />
+
+    <TextView
+        android:id="@+id/tvClanLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clan"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvGremioLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvGremioLabel" />
+
+    <ImageView
+        android:id="@+id/ivGremio"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_guild"
+        app:layout_constraintEnd_toEndOf="@+id/tvGremioLabel"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tvGremioLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvGremioLabel" />
+
+    <TextView
+        android:id="@+id/tvClanLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="9 nvl."
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvClanName"
+        app:layout_constraintStart_toStartOf="@+id/tvClanName"
+        app:layout_constraintTop_toBottomOf="@+id/tvClanName" />
+
+    <TextView
+        android:id="@+id/tvGremioLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="588dp"
+        android:text="Gremio"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvClanLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvGremioName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Forjadores del Futuro"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivGremio"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/ivGremio"
+        app:layout_constraintTop_toBottomOf="@+id/ivGremio" />
+
+    <TextView
+        android:id="@+id/tvClanName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Tecnomantes"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivClan"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/ivClan"
+        app:layout_constraintTop_toTopOf="@+id/tvGremioName" />
+
+    <!-- Items Section -->
+
+    <TextView
+        android:id="@+id/tvItemsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
+        android:text="Items"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGremioName" />
+
+    <LinearLayout
+        android:id="@+id/llItems"
+        android:layout_width="126dp"
+        android:layout_height="53dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/btnLogout"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemsLabel"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_pet_dog" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_pet_cat" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="134dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="776dp"
+        android:backgroundTint="@color/primary"
+        android:text="Cerrar Sesión"
+        android:textColor="@color/white"
+        android:textSize="13.9sp"
+        app:cornerRadius="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Logout Button -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

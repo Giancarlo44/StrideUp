@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.InicioActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="34dp"
+        tools:ignore="MissingConstraints">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/avatar1"
+                app:civ_circle_background_color="@color/alice_blue" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bienvenida 👋"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Karen Ramírez"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/Estrella"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="69dp"
+                        android:src="@drawable/ic_star" />
+
+                    <ImageView
+                        android:id="@+id/Trofeo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="19dp"
+                        android:src="@drawable/ic_trophy" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Search Bar -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="369dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="#F5F5F5"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:id="@+id/lupa"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_search" />
+
+                <EditText
+                    android:id="@+id/buscamapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:background="@null"
+                    android:hint="Buscar"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Daily Challenge Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="365dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="6.5dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="#92A8D1"
+            app:cardCornerRadius="28dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Desafío diario"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="222dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="18dp"
+                        android:text="Lee sobre la historia de la Universidad del Santa."
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/buttonChevron"
+                    android:layout_width="83dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/ic_chevron_right" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Map Section -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="25dp"
+            android:text="Mapa"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Botón para ampliar el mapa -->
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fmapa"
+            android:layout_width="368dp"
+            android:layout_height="282dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="30dp">
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/expand"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="309dp"
+                android:background="@drawable/ic_expand" />
+
+
+        </androidx.cardview.widget.CardView>
+        <!-- Stats Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <!-- Steps -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="69.23dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_footsteps" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="1600"
+                    android:textColor="@color/black"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pasos totales"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- Calories -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="56.73dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_fire" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="640"
+                    android:textColor="@color/black"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calorías"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- Distance -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_distance" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="1.07"
+                    android:textColor="@color/black"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Km"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

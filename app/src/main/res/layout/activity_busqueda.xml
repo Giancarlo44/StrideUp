@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="34dp"
+        tools:ignore="MissingConstraints">
+
+    <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/avatar1"
+                app:civ_circle_background_color="@color/alice_blue" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bienvenida 👋"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Karen Ramírez"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="69dp"
+                        android:src="@drawable/ic_star" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="19dp"
+                        android:src="@drawable/ic_trophy" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- CardView para bordes redondeados -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/light_purple"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <!-- Contenedor principal -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <!-- Flecha de regreso -->
+                <ImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="Back arrow"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <!-- Campo de texto editable -->
+                <EditText
+                    android:id="@+id/titleEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toStartOf="@id/closeIcon"
+                    android:layout_toEndOf="@id/backArrow"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="Escribe aquí..."
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:text="Biblioteca central"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <!-- Botón de cerrar -->
+                <ImageView
+                    android:id="@+id/closeIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="Close icon"
+                    android:src="@drawable/ic_close" />
+
+                <!-- Línea divisoria -->
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/backArrow"
+                    android:layout_marginTop="8dp"
+                    android:background="#D2C4E9" />
+
+                <!-- Espacio debajo de la línea divisoria -->
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/divider"
+                android:layout_marginTop="8dp"></RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

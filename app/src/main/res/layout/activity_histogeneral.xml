@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    >
+
+    <!-- Barra superior -->
+
+    <!-- Contenedor de la lista -->
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Flecha de regreso -->
+        <ImageView
+            android:id="@+id/btnatras"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Volver"
+            android:src="@drawable/navigate_before"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="Conoce la UNS"
+            android:textColor="#000000"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <!-- Elementos de la lista -->
+            <!-- Repite estos bloques para cada ítem -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:cardCornerRadius="12dp"
+                android:background="#FFFFFF">
+
+                <!-- Número del elemento -->
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:textStyle="bold" />
+
+                <!-- Texto del evento -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="Década de 1960: El Inicio del Sueño"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Imagen o ícono -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_image_placeholder"
+                    android:contentDescription="Imagen de evento" />
+            </LinearLayout>
+
+            <!-- Segundo ítem -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:cardCornerRadius="12dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical">
+
+                <!-- Número del elemento -->
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background"
+                    android:textColor="@color/white"
+                    android:text="2"
+                    android:textStyle="bold" />
+
+                <!-- Texto del evento -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="10 de octubre de 1981: El Compromiso Presidencial"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Imagen o ícono -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_image_placeholder"
+                    android:contentDescription="Imagen de evento" />
+            </LinearLayout>
+
+            <!-- Tercer ítem -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:cardCornerRadius="12dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical">
+
+                <!-- Número del elemento -->
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background"
+                    android:textColor="@color/white"
+                    android:text="3"
+                    android:textStyle="bold" />
+
+                <!-- Texto del evento -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="20 de diciembre de 1984: Nacimiento de la UNS"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Imagen o ícono -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_image_placeholder"
+                    android:contentDescription="Imagen de evento" />
+            </LinearLayout>
+
+            <!-- Cuarto ítem -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:cardCornerRadius="12dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical">
+
+                <!-- Número del elemento -->
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background"
+                    android:textColor="@color/white"
+                    android:text="4"
+                    android:textStyle="bold" />
+
+                <!-- Texto del evento -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="1987: Primer Concurso de Admisión"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Imagen o ícono -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_image_placeholder"
+                    android:contentDescription="Imagen de evento" />
+            </LinearLayout>
+
+            <!-- Quinto ítem -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:cardCornerRadius="12dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical">
+
+                <!-- Número del elemento -->
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background"
+                    android:textColor="@color/white"
+                    android:text="5"
+                    android:textStyle="bold" />
+
+                <!-- Texto del evento -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="1998: Funcionamiento Definitivo"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Imagen o ícono -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_image_placeholder"
+                    android:contentDescription="Imagen de evento" />
+            </LinearLayout>
+
+            <!-- Sexto ítem -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:cardCornerRadius="12dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical">
+
+                <!-- Número del elemento -->
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background"
+                    android:textColor="@color/white"
+                    android:text="6"
+                    android:textStyle="bold" />
+
+                <!-- Texto del evento -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="2000: Innovación Tecnológica"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Imagen o ícono -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_image_placeholder"
+                    android:contentDescription="Imagen de evento" />
+            </LinearLayout>
+
+            <!-- Septimo ítem -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:cardCornerRadius="12dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical">
+
+                <!-- Número del elemento -->
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background"
+                    android:textColor="@color/white"
+                    android:text="7"
+                    android:textStyle="bold" />
+
+                <!-- Texto del evento -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="2019: Licenciamiento Institucional"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Imagen o ícono -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_image_placeholder"
+                    android:contentDescription="Imagen de evento" />
+            </LinearLayout>
+
+            <!-- Octavo ítem -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:cardCornerRadius="12dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical">
+
+                <!-- Número del elemento -->
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background"
+                    android:textColor="@color/white"
+                    android:text="8"
+                    android:textStyle="bold" />
+
+                <!-- Texto del evento -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="2022: Nueva Gestión Rectoral"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Imagen o ícono -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_image_placeholder"
+                    android:contentDescription="Imagen de evento" />
+            </LinearLayout>
+
+            <!-- Preguntas ítem -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:cardCornerRadius="12dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical">
+
+                <!-- Número del elemento -->
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background"
+                    android:textColor="@color/white"
+                    android:text="1P"
+                    android:textStyle="bold" />
+
+                <!-- Texto del evento -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="Preguntas                                              Nivel 1"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Imagen o ícono -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_image_placeholder"
+                    android:contentDescription="Imagen de evento" />
+            </LinearLayout>
+
+
+
+
+
+
+            <!-- Repite estos bloques según los elementos de la lista -->
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
